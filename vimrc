@@ -1,16 +1,18 @@
 syntax enable
 set nu
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 nnoremap <space> za
 let python_highlight_all=1
 set clipboard=unnamed " use the osx clipboard
-set nocompatible 
+let mapleader=","
 set backspace=indent,eol,start " enable delete/backspace key to delete
 " set colorcolumn=81
 set encoding=utf-8
 
+set tabstop=4
 set shiftwidth=4
+set hlsearch
 set autoindent
 set smartindent
 set nocompatible 
@@ -35,7 +37,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Chiel92/vim-autoformat'
-
+Plugin 'scrooloose/nerdcommenter'
 
 " 以下范例用来支持不同格式的插件安装.
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
@@ -87,7 +89,11 @@ noremap <F3> :Autoformat<CR> " autoformat codes
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+au BufWrite * :Autoformat
 
 " Map Begin/End of a line
 noremap H ^
 noremap L $
+
+" For nerdcommenter 
+let g:NERDSpaceDelims=1
