@@ -38,6 +38,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'jiangmiao/auto-pairs'
+'Plugin 'tpope/vim-fugitive'
 
 " 以下范例用来支持不同格式的插件安装.
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
@@ -74,14 +77,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_python_binary_path = 'python' " change to the current python interpreter (useful for virtual env or anaconda)
 let $PYTHONPATH .= getcwd() " when importing myself's other module, let YCM to complete
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.o'] "ignore files in NERDTree
 
 " ale python linter
 let g:ale_linters = {'python': ['flake8'], 'reStructuredText': ['rstcheck']}
 let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8']}
 
 " open and close TagBar and NerdTree
-nmap <F8> :TagbarToggle<CR>
+nmap <F5> :TagbarToggle<CR>
 map <C-n> :NERDTreeToggle<CR> " show and close NERDTree
 
 " for python autoformat
