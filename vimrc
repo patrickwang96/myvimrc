@@ -28,8 +28,13 @@ filetype on
 noremap H ^
 noremap L $
 
+" tab navigation with ctrl-hl 
+nnoremap <C-h> gt
+nnoremap <C-l> gT
+
 " open vertical split from right
 set splitright
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
