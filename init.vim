@@ -2,7 +2,7 @@ syntax enable
 set nocompatible
 set nu  rnu
 set mouse=a
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 set backspace=indent,eol,start " enable delete/backspace key to delete
 set clipboard=unnamedplus
@@ -51,10 +51,13 @@ Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
 Plug 'rhysd/vim-clang-format', {'for': 'cpp'}
-Plug 'python-mode/python-mode', {'for': 'python'}
+" Plug 'python-mode/python-mode', {'for': 'python'}
 
 " Initialize plugin system
 call plug#end()
